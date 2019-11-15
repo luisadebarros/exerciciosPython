@@ -1,5 +1,4 @@
 i = 0
-j = 0
 acumulador = 0
 lista_notas = []
 
