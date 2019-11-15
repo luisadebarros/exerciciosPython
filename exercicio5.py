@@ -1,15 +1,28 @@
-prod = input('Há produtos no carrinho? (sim) (nao)')
-if prod == 'sim' or prod == 'nao':
-    while prod == 'sim':
-        print('Qual a quantidade do produto?')
-        quant = [int(input())]
-        print('Qual o produto?')
-        nome = input()
-        print('Qual o preço do produto? R$')
-        preco = float(input())
-        prod = input('Há produtos no carrinho? (sim) (nao)')
+print('Ha quantos produtos diferentes na cesta?')
+prod = int(input())
+i = prod
+j = 0
+total_quant = 0
+total_preco = 0
+total = 0
 
-    print(quant[0])
+quantidades = []
+nomes = []
+precos = []
 
-else:
-    print('Erro 404 (insira somente (sim) ou (nao) ESPECIFICAMENTE, sem parenteses)')
+while prod > 0:
+    nomes.append(input('Nome: '))
+    quantidades.append(int(input('Quantidade: ')))
+    precos.append(float(input('Preço: ')))
+# miau
+    prod -= 1
+
+while j < i:
+    print('{} . Quantidade: {}  |  Nome: {}  |  Preço: {}'.format(j + 1, quantidades[j], nomes[j], precos[j]))
+    total_quant = quantidades[j]
+    total_preco = precos[j]
+    total += total_quant * total_preco
+
+    j += 1
+
+print('Total da compra: {}'.format(total))
