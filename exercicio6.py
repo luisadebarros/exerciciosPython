@@ -13,3 +13,4 @@ elif imc <= 30:
     print('Peso: {}, Altura: {}, Imc: {}, acima do peso'.format(peso, altura, imc))
 elif imc > 30:
     print('Peso: {}, Altura: {}, Imc: {}, você está obeso'.format(peso, altura, imc))
+
